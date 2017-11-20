@@ -2,15 +2,19 @@ package br.com.lelis.livros.modelo;
 
 import java.util.Calendar;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 import org.springframework.format.annotation.DateTimeFormat;
 
 
 public class Livro {
 
 	private long id;
+	@NotNull @Size(min=2, message="O titulo deve ter no minimo dois caracteres")
 	private String titulo;
 	private boolean lido;
-	
+
 	@DateTimeFormat(pattern="dd/MM/yyyy")
 	private Calendar dataFinalizacao;
 
