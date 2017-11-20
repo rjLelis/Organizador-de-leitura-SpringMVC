@@ -1,8 +1,11 @@
 package br.com.lelis.livros.controller;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import br.com.lelis.livros.dao.LivroDao;
@@ -24,7 +27,11 @@ public class LivrosController {
 	}
 	
 	@RequestMapping("adicionaLivro")
-	public String adiciona(Livro livro) {
+	public String adiciona(@Valid Livro livro, BindingResult result) {
+		if(result.hasFieldErrors("titulo")) {
+			return "livros/formulario";
+		}
+		
 		dao.adiciona(livro);
 		return "redirect:listaLivros";
 	}
