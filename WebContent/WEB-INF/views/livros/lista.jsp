@@ -37,6 +37,6 @@
 	</table>
 
 	<br>
-	<a href="novoLivro">Adicionar livro</a>
+	<a href="novoLivro">Adicionar um livro</a>
 </body>
 </html>
