@@ -1,3 +1,5 @@
+/*Cria a tabela de livros*/
+
 create table livros(
     id serial,
     titulo varchar(255),
