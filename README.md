@@ -1,4 +1,9 @@
 # Organizador de livros SpringMVC
-Versão do organizador de livros implementado com SpringMVC
+Versão do [organizador de livros](https://github.com/rjLelis/Organizador-de-leitura) implementado com SpringMVC
 
-com PostgreSQL, Tomcat 8 e tags JSTL e inverção de controle.
+## Tecnologias usadas:
+
+- Spring
+- PostgreSQL
+- Tomcat 8 
+- tags JSTL
